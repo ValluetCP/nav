@@ -1,12 +1,45 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}img,video{width:100%;vertical-align:middle;}
 
 /* FONT */
+
+/* TITRE */
 @font-face {
+    font-family: 'AmericanaRegular';
+    src: url('font/Americana/americana_font_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* TEXTE COURANT */
+/* font-family: 'Karla', sans-serif; */
+
+
+
+
+/* EXEMPLE SYNTAXE FONT */
+
+/* 
+@font-face {
+    font-family: 'BallparkWeiner';
+    src: url('fonts/ballpark_weiner-webfont.eot');
+    src: url('fonts/ballpark_weiner-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ballpark_weiner-webfont.woff') format('woff'),
+         url('fonts/ballpark_weiner-webfont.ttf') format('truetype'),
+         url('fonts/ballpark_weiner-webfont.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+
+/* @font-face {
     font-family: americana regular;
     src: url(./font/Americana\ Font\ Regular/);
     font-weight: regular;
-    /* font-weight: bold; */
-}
+    /* font-weight: bold; 
+} */
 
 :root{
 
@@ -16,10 +49,13 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --vertMoyen: #3A5D4D;
     --vertScroll: #1e5a3f;
     --vertClair: #EBF2ED;
-
+    
     /* Couleur vert (secondaire) */
     --vertFonceTransparent: #65736D;
     --vertNavTrait:#D4DFD7;
+    --vertHover: #56846E;
+    --vertScroll2: #576D5D;
+    --vertNavMenu: #9CA7A2;
 }
 
 
@@ -184,47 +220,119 @@ background-color: rgba(255, 255, 255, 0.5);
 
 
     
-    /*///////////////////////////////// PERSONALISATION - MENU */
-    
-    .grid_menu{
-        display: flex;
-        margin: auto;
-        width: 100%;
-        flex-direction: row-reverse;
-    }
-    
-    .menu_vert{
-        background-color: var(--vertFonce);
-        padding-top: 190px;
-        width: 100%;
-        
-    }
-    .menu_fond{
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 100%;
-    }
-    
+/*///////////////////////////////// PERSONALISATION - MENU */
 
-    /* CONTENU MENU */
+.grid_menu{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    flex-direction: row-reverse;
+}
 
-    .nav2_container{
-        width: 55%;
-        margin: auto;
-        
-    }
+.menu_vert{
+    background-color: var(--vertFonce);
+    padding-top: 235px;
+    width: 100%;
+    position: relative;
+}
+.menu_fond{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+
+/* CONTENU MENU */
+
+.nav2_container{
+    /* width: 55%; */
+    width: 63%;
+    margin: auto;
     
-    .nav2_menu ul{
-        display: flex;
-        justify-content: space-between;
-    }
+}
 
-    .nav2_menu ul a{
-        text-decoration: none;
-    }
+/* --- PROFIL CONNEXION  - (prénom & image profil rond) --- */
 
-    .list_sous_menu{
-        margin-top: 50px;
-    }
+.profil_nav{
+    display: flex;
+    position: absolute;
+    top: 65px;
+    align-items: center;
+} 
+
+.img_profil{
+    border: 2px solid var(--vertNavMenu);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.profil_nav p{
+    text-decoration: none;
+    font-family: 'Karla', sans-serif; 
+    color: var(--vertNavMenu);
+    font-size: 22px;
+    font-weight: 200;
+    padding-left: 24px;
+} 
+
+/* --- ESPACE NAVIGATION  - MENU (admin & client) --- */
+    
+.nav2_menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav2_menu ul a{
+    text-decoration: none;
+    font-family: 'Karla', sans-serif; 
+    color: var(--vertHover);
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav2_menu ul a:hover{
+    color: var(--vertClair);
+}
+
+
+/* --- ESPACE NAVIGATION  - LIENS --- */
+
+.list_sous_menu{
+    margin-top: 25px;
+}
+
+.list_sous_menu ul li a{
+    font-family: 'AmericanaRegular';
+    color: var(--vertClair);
+    text-decoration: none;
+    font-size: 40px;
+    /* font-size: 43px; */
+}
+
+.list_sous_menu ul li{
+    padding-top: 42px;
+}
+
+.list_sous_menu ul li a:hover{
+    color: var(--vertHover);
+}
    
-    
+
+/* --- DECONNEXION - LIENS --- */
+
+.deconnexion {
+    text-align: end;
+    /* margin-top: 234px; */
+    position: absolute;
+    bottom: 85px;
+    right: 165px;
+}
+.deconnexion a{
+    text-decoration: none;
+    font-family: 'Karla', sans-serif; 
+    color: var(--vertNavMenu);
+    font-size: 22px;
+    font-weight: 200;
+}
     
