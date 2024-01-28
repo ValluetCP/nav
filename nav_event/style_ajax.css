@@ -82,6 +82,7 @@ nav{
     top: 0;
 }
 
+
 /* -------------- NAVIGATION (event.php) -------------- */
 nav{
     /* padding: 30px 70px; */
@@ -95,7 +96,8 @@ nav{
     justify-content: end;
     align-items: center;
     padding: 0 150px;
-
+    transition: all 0.25s ease-in-out;
+    
 }
 
 .navigation{
@@ -138,6 +140,16 @@ nav{
     background-color: var(--vertFonceMoin);
     margin-top: 8px;
 }
+
+
+/* NAV - Animation scroll - DEBUT*/
+
+.navbar.scroll{
+    background-color: var(--vertFonce);
+    height: 75px;
+}
+
+/* NAV - Animation scroll - FIN */
 
 /* Personnalisation */
 
