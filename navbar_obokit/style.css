@@ -19,6 +19,27 @@ h1 {
     padding-bottom: 150px;
 }
 
+/* CODE NAVBAR */
+nav{
+    background-color: #EBE6D7;
+    width: 104px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+.home{
+    transform: rotate(-90deg) translateY(0px) translateX(-400px);
+}
+
+.home a{
+    text-decoration: none;
+}
+
+/* MENU BURGER */
 .btn {
     position: fixed;
     left: 40px;
@@ -38,6 +59,8 @@ h1 {
     width: 40px;
 }
 
+/* MENU LISTE */
+
 .conteneurMenu {
     background: linear-gradient(45deg, rgb(137,131,228), rgb(248,138,138));
     height: 100%;
@@ -45,6 +68,7 @@ h1 {
     position: fixed;
     top:0;
     left:0;
+    transform: translateX(104px);
 }
 
 .listeMenu {

@@ -7,7 +7,7 @@ let i = 0;
 const TL = new TimelineMax({paused: true});
 
 TL
-.to(menu,1,{width:'25%'})
+.to(menu,1,{width:'35%'})
 .staggerTo(MenuListItem,0.3,{opacity: 1, x: 0}, 0.2, '-=0.75')
 
 btn.addEventListener('click', () => {
